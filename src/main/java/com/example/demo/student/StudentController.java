@@ -14,20 +14,18 @@ import java.util.List;
 
 public class StudentController {
 
+
+    private final StudentService studentService;
+
+    public StudentController ( StudentService studentService) {
+
+        this.studentService = studentService;
+    }
+
     @GetMapping
     public List<Student> getStudents(){
-        return List.of(
+        return studentService.getStudents();
 
-                new Student(
-                        1l,
-                        "Mariam",
-                        "mariam.jamal@gmail.com",
-                        LocalDate.of(2020, Month.JANUARY,5),
-                        26
-                )
-
-
-        );
     }
 
 
