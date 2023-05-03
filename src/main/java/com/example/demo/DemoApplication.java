@@ -19,19 +19,5 @@ public class DemoApplication {
 	}
 
 
-	@GetMapping("/")
-	public List<Student>  hello(){
-		return List.of(
 
-				new Student(
-						1l,
-						"Mariam",
-						"mariam.jamal@gmail.com",
-						LocalDate.of(2020, Month.JANUARY,5),
-						21
-				)
-
-
-		);
-	}
 }
